@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Creations from './components/Creations';
 import Gallery from './components/Gallery';
+import Footer from './components/Footer';
+import './globals.css';
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
         <About />
         <Creations />
         <Gallery />
+        <Footer />
       </main>
     </div>
   );
