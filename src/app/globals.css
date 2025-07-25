@@ -1,2 +1,85 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Thème pastel personnalisé pour DaisyUI */
+[data-theme="pastel"] {
+  --p: 326 73% 88%;     /* Rose pastel principal */
+  --pf: 326 73% 78%;    /* Rose pastel focus */
+  --pc: 330 20% 15%;    /* Contraste rose */
+
+  --s: 190 70% 85%;     /* Bleu pastel secondaire */
+  --sf: 190 70% 75%;    /* Bleu pastel focus */
+  --sc: 195 20% 15%;    /* Contraste bleu */
+
+  --a: 55 85% 88%;      /* Jaune pastel accent */
+  --af: 55 85% 78%;     /* Jaune pastel focus */
+  --ac: 60 20% 15%;     /* Contraste jaune */
+
+  --n: 220 15% 20%;     /* Neutral foncé */
+  --nf: 220 15% 10%;    /* Neutral focus */
+  --nc: 220 15% 85%;    /* Neutral content */
+
+  --b1: 0 0% 98%;       /* Base 1 - fond principal */
+  --b2: 0 0% 95%;       /* Base 2 - fond secondaire */
+  --b3: 0 0% 92%;       /* Base 3 - fond élevé */
+  --bc: 220 15% 20%;    /* Base content */
+
+  --in: 200 100% 90%;   /* Info pastel */
+  --inc: 200 50% 20%;   /* Info content */
+  --su: 120 60% 85%;    /* Success pastel */
+  --suc: 120 40% 20%;   /* Success content */
+  --wa: 45 100% 85%;    /* Warning pastel */
+  --wac: 45 60% 20%;    /* Warning content */
+  --er: 0 65% 85%;      /* Error pastel */
+  --erc: 0 50% 25%;     /* Error content */
+}
+
+/* Classes utilitaires personnalisées */
+.text-gradient-pastel {
+    background: linear-gradient(135deg, #f8a5c2, #a8e6cf, #ffd3a5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-pastel {
+    box-shadow: 0 10px 25px -5px rgba(248, 165, 194, 0.1), 0 10px 25px -5px rgba(168, 230, 207, 0.1);
+}
+
+.card-pastel {
+    background: linear-gradient(135deg, 
+        rgba(248, 165, 194, 0.05) 0%, 
+        rgba(168, 230, 207, 0.05) 50%, 
+        rgba(255, 211, 165, 0.05) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation douce pour les éléments */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(248, 165, 194, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f8a5c2, #a8e6cf);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #f68bb3, #8fd9b6);
+}
