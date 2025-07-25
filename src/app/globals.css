@@ -36,50 +36,155 @@
 
 /* Classes utilitaires personnalisées */
 .text-gradient-pastel {
-    background: linear-gradient(135deg, #f8a5c2, #a8e6cf, #ffd3a5);
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffd3a5 50%, #f8a5c2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 700;
 }
 
-.shadow-pastel {
-    box-shadow: 0 10px 25px -5px rgba(248, 165, 194, 0.1), 0 10px 25px -5px rgba(168, 230, 207, 0.1);
+/* Amélioration de la navigation pour plus de contraste */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(248, 165, 194, 0.1);
 }
 
-.card-pastel {
-    background: linear-gradient(135deg, 
-        rgba(248, 165, 194, 0.05) 0%, 
-        rgba(168, 230, 207, 0.05) 50%, 
-        rgba(255, 211, 165, 0.05) 100%
-    );
+/* Meilleur espacement des statistiques Hero */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 400px;
+}
+
+.hero-stat {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Animation douce pour les éléments */
-.animate-float {
-    animation: float 6s ease-in-out infinite;
+/* Cards de valeurs avec meilleur contraste */
+.value-card {
+    background: rgba(45, 55, 70, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+.value-card:hover {
+    transform: translateY(-5px);
+    background: rgba(45, 55, 70, 1);
+    border-color: rgba(248, 165, 194, 0.3);
 }
 
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-    width: 8px;
+/* Amélioration des icônes des valeurs */
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(248, 165, 194, 0.1);
+/* Barres de progression plus stylées */
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+    position: relative;
 }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #f8a5c2, #a8e6cf);
-    border-radius: 4px;
+.skill-progress {
+    background: linear-gradient(90deg, #f8a5c2, #a8e6cf);
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: width 1.5s ease-out;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #f68bb3, #8fd9b6);
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Section À propos avec meilleur contraste */
+.about-section {
+    background: linear-gradient(135deg, 
+        rgba(45, 55, 70, 0.95) 0%, 
+        rgba(35, 45, 60, 0.98) 100%);
+    color: white;
+}
+
+/* Profile card améliorée */
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Badges avec plus de style */
+.badge-custom {
+    background: rgba(248, 165, 194, 0.2);
+    color: #f8a5c2;
+    border: 1px solid rgba(248, 165, 194, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Animation d'entrée pour les éléments */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation pour les cards */
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+.value-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem;
+    }
+    
+    .text-gradient-pastel {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
 }
