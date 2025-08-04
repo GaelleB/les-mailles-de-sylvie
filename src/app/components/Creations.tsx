@@ -96,7 +96,7 @@ const Creations = () => {
     };
 
     return (
-        <section id="creations" className="py-20 bg-gradient-to-br from-base-200 to-base-100">
+        <section id="creations" className="py-20 bg-slate-700">
             <div className="container mx-auto px-4">
                 {/* En-tête de section */}
                 <div className="text-center mb-16">
@@ -104,7 +104,7 @@ const Creations = () => {
                         <span className="text-secondary">✨</span>
                         <span className="text-sm font-medium text-secondary">Mes créations</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-pastel">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-dark">
                         Un savoir-faire unique
                     </h2>
                     <p className="text-lg text-base-content/70 max-w-2xl mx-auto">

@@ -15,13 +15,13 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gradient-to-br from-base-300 to-base-200 text-base-content">
+        <footer className="bg-slate-900 text-base-content">
             {/* Section principale du footer */}
             <div className="container mx-auto px-4 py-16">
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
                     {/* Colonne 1: À propos */}
                     <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-gradient-pastel mb-4">
+                        <h3 className="text-xl font-bold text-gradient-dark mb-4">
                             Les Mailles de Sylvie
                         </h3>
                         <p className="text-base-content/70 text-sm leading-relaxed">

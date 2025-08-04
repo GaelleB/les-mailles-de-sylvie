@@ -32,7 +32,7 @@ const About = () => {
     ];
 
     return (
-        <section id="a-propos" className="py-20 bg-gradient-to-br from-base-100 to-base-200">
+        <section id="a-propos" className="py-20 bg-slate-800">
             <div className="container mx-auto px-4">
                 {/* En-tête de section */}
                 <div className="text-center mb-16">
@@ -40,7 +40,7 @@ const About = () => {
                         <span className="text-primary">👋</span>
                         <span className="text-sm font-medium text-primary">À propos de moi</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-pastel">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-dark">
                         Une passion transmise
                     </h2>
                     <p className="text-lg text-base-content/70 max-w-2xl mx-auto">

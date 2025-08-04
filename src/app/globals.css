@@ -1,37 +1,37 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Thème pastel personnalisé pour DaisyUI */
-[data-theme="pastel"] {
-  --p: 326 73% 88%;     /* Rose pastel principal */
-  --pf: 326 73% 78%;    /* Rose pastel focus */
-  --pc: 330 20% 15%;    /* Contraste rose */
+/* Thème sombre pastel personnalisé pour DaisyUI */
+[data-theme="dark-pastel"] {
+  --p: 326 60% 70%;     /* Rose pastel principal */
+  --pf: 326 65% 75%;    /* Rose pastel focus */
+  --pc: 330 20% 85%;    /* Contraste rose (clair pour fond sombre) */
 
-  --s: 190 70% 85%;     /* Bleu pastel secondaire */
-  --sf: 190 70% 75%;    /* Bleu pastel focus */
-  --sc: 195 20% 15%;    /* Contraste bleu */
+  --s: 190 55% 75%;     /* Bleu pastel secondaire */
+  --sf: 190 60% 80%;    /* Bleu pastel focus */
+  --sc: 195 20% 85%;    /* Contraste bleu (clair pour fond sombre) */
 
-  --a: 55 85% 88%;      /* Jaune pastel accent */
-  --af: 55 85% 78%;     /* Jaune pastel focus */
-  --ac: 60 20% 15%;     /* Contraste jaune */
+  --a: 55 70% 75%;      /* Jaune pastel accent */
+  --af: 55 75% 80%;     /* Jaune pastel focus */
+  --ac: 60 20% 85%;     /* Contraste jaune (clair pour fond sombre) */
 
-  --n: 220 15% 20%;     /* Neutral foncé */
-  --nf: 220 15% 10%;    /* Neutral focus */
-  --nc: 220 15% 85%;    /* Neutral content */
+  --n: 220 20% 25%;     /* Neutral foncé */
+  --nf: 220 25% 15%;    /* Neutral focus */
+  --nc: 220 15% 85%;    /* Neutral content (texte clair) */
 
-  --b1: 0 0% 98%;       /* Base 1 - fond principal */
-  --b2: 0 0% 95%;       /* Base 2 - fond secondaire */
-  --b3: 0 0% 92%;       /* Base 3 - fond élevé */
-  --bc: 220 15% 20%;    /* Base content */
+  --b1: 230 25% 8%;     /* Base 1 - fond principal très sombre */
+  --b2: 230 20% 12%;    /* Base 2 - fond secondaire */
+  --b3: 230 15% 16%;    /* Base 3 - fond élevé */
+  --bc: 220 15% 90%;    /* Base content (texte très clair) */
 
-  --in: 200 100% 90%;   /* Info pastel */
-  --inc: 200 50% 20%;   /* Info content */
-  --su: 120 60% 85%;    /* Success pastel */
-  --suc: 120 40% 20%;   /* Success content */
-  --wa: 45 100% 85%;    /* Warning pastel */
-  --wac: 45 60% 20%;    /* Warning content */
-  --er: 0 65% 85%;      /* Error pastel */
-  --erc: 0 50% 25%;     /* Error content */
+  --in: 200 70% 75%;    /* Info pastel */
+  --inc: 200 20% 85%;   /* Info content */
+  --su: 120 50% 75%;    /* Success pastel */
+  --suc: 120 20% 85%;   /* Success content */
+  --wa: 45 70% 75%;     /* Warning pastel */
+  --wac: 45 20% 85%;    /* Warning content */
+  --er: 0 55% 75%;      /* Error pastel */
+  --erc: 0 20% 85%;     /* Error content */
 }
 
 /* Classes utilitaires personnalisées */
@@ -43,11 +43,20 @@
     font-weight: 700;
 }
 
+/* Gradient pour thème sombre */
+.text-gradient-dark {
+    background: linear-gradient(135deg, #87ceeb 0%, #f0e68c 50%, #dda0dd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
 /* Amélioration de la navigation pour plus de contraste */
 .navbar-scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(20, 25, 40, 0.95);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(248, 165, 194, 0.1);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.2);
 }
 
 /* Meilleur espacement des statistiques Hero */
@@ -63,15 +72,15 @@
     text-align: center;
     padding: 1rem;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(135, 206, 235, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(221, 160, 221, 0.3);
 }
 
 /* Cards de valeurs avec meilleur contraste */
 .value-card {
-    background: rgba(45, 55, 70, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(30, 35, 50, 0.95);
+    border: 1px solid rgba(135, 206, 235, 0.2);
     border-radius: 16px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -79,8 +88,8 @@
 
 .value-card:hover {
     transform: translateY(-5px);
-    background: rgba(45, 55, 70, 1);
-    border-color: rgba(248, 165, 194, 0.3);
+    background: rgba(30, 35, 50, 1);
+    border-color: rgba(221, 160, 221, 0.4);
 }
 
 /* Amélioration des icônes des valeurs */
@@ -92,7 +101,7 @@
 
 /* Barres de progression plus stylées */
 .skill-bar {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(135, 206, 235, 0.1);
     border-radius: 10px;
     overflow: hidden;
     height: 8px;
@@ -100,7 +109,7 @@
 }
 
 .skill-progress {
-    background: linear-gradient(90deg, #f8a5c2, #a8e6cf);
+    background: linear-gradient(90deg, #dda0dd, #87ceeb, #f0e68c);
     height: 100%;
     border-radius: 10px;
     position: relative;
@@ -126,25 +135,25 @@
 /* Section À propos avec meilleur contraste */
 .about-section {
     background: linear-gradient(135deg, 
-        rgba(45, 55, 70, 0.95) 0%, 
-        rgba(35, 45, 60, 0.98) 100%);
-    color: white;
+        rgba(20, 25, 40, 0.95) 0%, 
+        rgba(25, 30, 45, 0.98) 100%);
+    color: #f0f8ff;
 }
 
 /* Profile card améliorée */
 .profile-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(135, 206, 235, 0.08);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(221, 160, 221, 0.2);
     border-radius: 20px;
     padding: 2rem;
 }
 
 /* Badges avec plus de style */
 .badge-custom {
-    background: rgba(248, 165, 194, 0.2);
-    color: #f8a5c2;
-    border: 1px solid rgba(248, 165, 194, 0.3);
+    background: rgba(221, 160, 221, 0.2);
+    color: #dda0dd;
+    border: 1px solid rgba(221, 160, 221, 0.4);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.875rem;

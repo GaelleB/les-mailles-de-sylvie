@@ -13,7 +13,7 @@ const HeroRefined = () => {
     };
 
     return (
-        <section id="accueil" className="hero min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50" ref={heroRef}>
+        <section id="accueil" className="hero min-h-screen relative overflow-hidden bg-slate-800" ref={heroRef}>
             {/* Éléments décoratifs flottants optimisés */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float blur-sm"></div>
@@ -26,23 +26,23 @@ const HeroRefined = () => {
                 <div className="max-w-4xl fade-in-up">
                 {/* Badge d'introduction raffiné */}
                 <div className="mb-8">
-                    <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 shadow-lg">
+                    <div className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800/40 backdrop-blur-sm rounded-full border border-sky-300/30 shadow-lg">
                         <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                        <span className="text-sm font-medium text-base-content/80">Artisane tricoteuse passionnée</span>
+                        <span className="text-sm font-medium text-slate-200">Artisane tricoteuse passionnée</span>
                     </div>
                 </div>
 
                 {/* Titre principal avec gradient optimisé */}
                 <div className="mb-8">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                    <span className="block text-gradient-pastel mb-2">Les Mailles</span>
-                    <span className="block text-base-content/80 text-4xl md:text-5xl lg:text-6xl">de Sylvie</span>
+                    <span className="block text-gradient-dark mb-2">Les Mailles</span>
+                    <span className="block text-slate-300 text-4xl md:text-5xl lg:text-6xl">de Sylvie</span>
                     </h1>
                 </div>
 
                 {/* Sous-titre avec meilleur espacement */}
                 <div className="mb-12">
-                    <p className="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                         Découvrez un univers chaleureux où chaque fil raconte une histoire. 
                     <br className="hidden md:block" />
                         Créations artisanales uniques, tricotées avec amour et savoir-faire.
@@ -53,15 +53,15 @@ const HeroRefined = () => {
                 <div className="hero-stats mb-12">
                     <div className="hero-stat group hover:scale-105 transition-transform duration-300">
                         <div className="text-3xl md:text-4xl font-bold text-primary mb-1">20+</div>
-                        <div className="text-xs md:text-sm text-base-content/60 font-medium">Années d&apos;expérience</div>
+                        <div className="text-xs md:text-sm text-slate-400 font-medium">Années d&apos;expérience</div>
                     </div>
                     <div className="hero-stat group hover:scale-105 transition-transform duration-300">
                         <div className="text-3xl md:text-4xl font-bold text-secondary mb-1">100+</div>
-                        <div className="text-xs md:text-sm text-base-content/60 font-medium">Créations uniques</div>
+                        <div className="text-xs md:text-sm text-slate-400 font-medium">Créations uniques</div>
                     </div>
                     <div className="hero-stat group hover:scale-105 transition-transform duration-300">
                         <div className="text-3xl md:text-4xl font-bold text-accent mb-1">∞</div>
-                        <div className="text-xs md:text-sm text-base-content/60 font-medium">Passion</div>
+                        <div className="text-xs md:text-sm text-slate-400 font-medium">Passion</div>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ const HeroRefined = () => {
                         onClick={() => scrollToSection('creations')}
                         className="btn btn-primary btn-lg px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 group border-0"
                         style={{
-                            background: 'linear-gradient(135deg, #f8a5c2, #a8e6cf)',
+                            background: 'linear-gradient(135deg, #dda0dd, #87ceeb)',
                             color: 'white'
                         }}
                         >
@@ -83,7 +83,7 @@ const HeroRefined = () => {
                     
                     <button 
                         onClick={() => scrollToSection('a-propos')}
-                        className="btn btn-outline btn-lg px-8 py-4 border-2 border-primary/30 text-base-content/80 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300"
+                        className="btn btn-outline btn-lg px-8 py-4 border-2 border-sky-300/50 text-slate-300 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300"
                         >
                         En savoir plus
                     </button>
@@ -92,9 +92,9 @@ const HeroRefined = () => {
                 {/* Indicateur de scroll stylisé */}
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60">
                     <div className="flex flex-col items-center gap-2 animate-bounce">
-                        <span className="text-xs text-base-content/50 font-medium tracking-wide">DÉFILER</span>
-                        <div className="w-6 h-10 border-2 border-base-content/30 rounded-full flex justify-center">
-                            <div className="w-1 h-3 bg-base-content/40 rounded-full mt-2 animate-pulse"></div>
+                        <span className="text-xs text-slate-400 font-medium tracking-wide">DÉFILER</span>
+                        <div className="w-6 h-10 border-2 border-slate-400/50 rounded-full flex justify-center">
+                            <div className="w-1 h-3 bg-slate-400/60 rounded-full mt-2 animate-pulse"></div>
                         </div>
                     </div>
                 </div>

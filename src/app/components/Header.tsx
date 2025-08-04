@@ -25,7 +25,7 @@ const Header = () => {
         <header 
         className={`navbar fixed top-0 z-50 transition-all duration-300 ${
             isScrolled 
-            ? 'bg-white/80 backdrop-blur-md shadow-pastel' 
+            ? 'bg-slate-800/95 backdrop-blur-md shadow-lg' 
             : 'bg-transparent'
         }`}
         >
@@ -36,7 +36,7 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-white/90 backdrop-blur-md rounded-box w-52">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800/95 backdrop-blur-md rounded-box w-52">
                 <li><button onClick={() => scrollToSection('accueil')} className="text-base-content hover:text-primary">Accueil</button></li>
                 <li><button onClick={() => scrollToSection('a-propos')} className="text-base-content hover:text-primary">À propos</button></li>
                 <li><button onClick={() => scrollToSection('creations')} className="text-base-content hover:text-primary">Créations</button></li>
@@ -46,7 +46,7 @@ const Header = () => {
             </div>
             <button 
             onClick={() => scrollToSection('accueil')}
-            className="btn btn-ghost text-xl font-bold text-gradient-pastel"
+            className="btn btn-ghost text-xl font-bold text-gradient-dark"
             >
             Les Mailles de Sylvie
             </button>
