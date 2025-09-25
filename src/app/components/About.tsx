@@ -11,7 +11,7 @@ const About = () => {
                         <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl" aria-hidden="true"></div>
                         <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-xl" aria-hidden="true"></div>
                         
-                        <div className="card bg-gradient-to-br from-base-200/80 to-base-300/60 backdrop-blur-lg shadow-2xl border-0 relative overflow-hidden">
+                        <div className="card bg-gradient-to-br from-base-200/80 to-base-300/60 backdrop-blur-lg shadow-2xl border-0 relative overflow-hidden fade-in-up hover:shadow-3xl hover:scale-102 transition-all duration-500">
                             {/* Motif décoratif subtil */}
                             <div className="absolute inset-0 opacity-5" aria-hidden="true">
                                 <div className="absolute inset-0" style={{
@@ -23,20 +23,18 @@ const About = () => {
                                 {/* Header avec avatar stylé */}
                                 <div className="flex flex-col items-center text-center mb-12">
                                     <div className="relative mb-6">
-                                        <div className="text-8xl md:text-9xl hover:rotate-12 transition-all duration-700 cursor-pointer">
+                                        <div className="text-8xl md:text-9xl hover:scale-110 transition-transform duration-500">
                                             🧶
                                         </div>
                                     </div>
                                     <div className="relative">
-                                        {/* Ligne de fil décorative */}
-                                        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-px h-6 bg-gradient-to-b from-primary/50 to-transparent animate-pulse" aria-hidden="true"></div>
-                                        <h3 className="text-4xl md:text-5xl font-bold text-gradient-adaptive mb-3 animate-fade-in-up">Sylvie</h3>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-gradient-adaptive mb-3">Sylvie</h3>
                                     </div>
                                 </div>
                             
                                 {/* Contenu textuel avec mise en forme élégante */}
                                 <div className="space-y-8 mb-12">
-                                    <div className="relative">
+                                    <div className="relative fade-in-up" style={{animationDelay: '0.6s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-transparent rounded-full" aria-hidden="true"></div>
                                         <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
                                             Bonjour ! Je suis Sylvie, passionnée de tricot et de crochet depuis 55 ans. 
@@ -45,7 +43,7 @@ const About = () => {
                                         </p>
                                     </div>
                                     
-                                    <div className="relative">
+                                    <div className="relative fade-in-up" style={{animationDelay: '0.9s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full" aria-hidden="true"></div>
                                         <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
                                             Après des années consacrées à ma carrière professionnelle, c&apos;est depuis ma retraite 
@@ -55,7 +53,7 @@ const About = () => {
                                         </p>
                                     </div>
                                     
-                                    <div className="relative">
+                                    <div className="relative fade-in-up" style={{animationDelay: '1.2s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-accent to-transparent rounded-full" aria-hidden="true"></div>
                                         <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
                                             Je crée des pièces durables et uniques par <strong className="text-secondary">pure passion</strong>. Chaque création 

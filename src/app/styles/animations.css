@@ -19,6 +19,51 @@
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* Animation bounce subtile pour la pelote */
+.animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+}
+
+@keyframes bounceSubtle {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-8px); 
+    }
+}
+
+/* Ombre extra forte pour hover card */
+.hover\:shadow-3xl:hover {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Scale subtil pour hover card */
+.hover\:scale-102:hover {
+    transform: scale(1.02);
+}
+
+/* Animation lettre par lettre */
+.letter-by-letter span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: letterAppear 0.6s ease-out forwards;
+}
+
+@keyframes letterAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
