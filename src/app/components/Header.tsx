@@ -112,7 +112,7 @@ const Header = () => {
                 </button>
             </li>
             </ul>
-        </div>
+        </nav>
         
         <div className="navbar-end">
             <ThemeToggle />

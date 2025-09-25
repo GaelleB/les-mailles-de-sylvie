@@ -1,0 +1,35 @@
+# robots.txt pour Les Mailles de Sylvie
+
+# Autoriser tous les robots d'indexation
+User-agent: *
+Allow: /
+
+# Sitemap XML
+Sitemap: https://les-mailles-de-sylvie.vercel.app/sitemap.xml
+
+# Interdire les fichiers système et dossiers temporaires
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.next/
+Disallow: /admin/
+Disallow: /temp/
+
+# Délai entre les requêtes (en secondes)
+Crawl-delay: 1
+
+# Optimisations spéciales pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Optimisations pour Bing
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
+
+# Autoriser les réseaux sociaux
+User-agent: facebookexternalhit/
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
