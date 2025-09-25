@@ -154,7 +154,7 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
                     </p>
                     {/* Texte caché pour lecteurs d'écran */}
                     <div className="sr-only">
-                        Veuillez patienter pendant que nous préparons l'univers des créations tricot de Sylvie
+                        Veuillez patienter pendant que nous préparons l&apos;univers des créations tricot de Sylvie
                     </div>
                 </div>
             </div>
