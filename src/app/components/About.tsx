@@ -1,153 +1,105 @@
 'use client';
 
 const About = () => {
-    const skills = [
-        { name: 'Tricot traditionnel', level: 95, color: 'primary' },
-        { name: 'Créations modernes', level: 90, color: 'secondary' },
-        { name: 'Réparations', level: 85, color: 'accent' },
-        { name: 'Conseils techniques', level: 92, color: 'primary' }
-    ];
-
-    const values = [
-        {
-            icon: '🧶',
-            title: 'Artisanat authentique',
-            description: 'Chaque pièce est créée à la main avec des techniques traditionnelles transmises de génération en génération.'
-        },
-        {
-            icon: '💝',
-            title: 'Fait avec amour',
-            description: 'Derrière chaque création se cache une attention particulière et une passion sincère pour l\'art du tricot.'
-        },
-        {
-            icon: '♻️',
-            title: 'Démarche éco-responsable',
-            description: 'Utilisation de laines naturelles et de qualité, privilégiant les circuits courts et les matières durables.'
-        },
-        {
-            icon: '⭐',
-            title: 'Pièces uniques',
-            description: 'Chaque création est unique, personnalisée selon vos envies et adaptée à votre style de vie.'
-        }
-    ];
-
     return (
-        <section id="a-propos" className="py-20 bg-slate-800">
+        <section id="a-propos" className="py-20 bg-slate-600">
             <div className="container mx-auto px-4">
-                {/* En-tête de section */}
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-                        <span className="text-primary">👋</span>
-                        <span className="text-sm font-medium text-primary">À propos de moi</span>
-                    </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-dark">
-                        Une passion transmise
-                    </h2>
-                    <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
-                        Découvrez l&apos;histoire derrière Les Mailles de Sylvie et la passion qui anime chaque création.
-                    </p>
-                </div>
-
-                <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                    {/* Colonne gauche - Photo et présentation */}
-                    <div className="space-y-6">
-                        <div className="card card-pastel shadow-pastel">
-                            <div className="card-body p-8">
-                                <div className="flex items-start gap-4 mb-6">
-                                    <div className="avatar placeholder">
-                                        <div className="bg-primary text-primary-content rounded-full w-16 h-16">
-                                        <span className="text-2xl">S</span>
+                {/* Description principale stylée avec design moderne */}
+                <div className="max-w-6xl mx-auto">
+                    <div className="relative">
+                        {/* Éléments décoratifs */}
+                        <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl" aria-hidden="true"></div>
+                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-xl" aria-hidden="true"></div>
+                        
+                        <div className="card bg-gradient-to-br from-base-200/80 to-base-300/60 backdrop-blur-lg shadow-2xl border-0 relative overflow-hidden">
+                            {/* Motif décoratif subtil */}
+                            <div className="absolute inset-0 opacity-5" aria-hidden="true">
+                                <div className="absolute inset-0" style={{
+                                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8a5c2' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3Ccircle cx='15' cy='15' r='4'/%3E%3Ccircle cx='45' cy='45' r='6'/%3E%3Ccircle cx='45' cy='15' r='3'/%3E%3Ccircle cx='15' cy='45' r='5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                                }}></div>
+                            </div>
+                            
+                            <div className="card-body p-10 md:p-16 relative z-10">
+                                {/* Header avec avatar stylé */}
+                                <div className="flex flex-col items-center text-center mb-12">
+                                    <div className="relative mb-6">
+                                        <div className="text-8xl md:text-9xl hover:rotate-12 transition-all duration-700 cursor-pointer">
+                                            🧶
                                         </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-base-content">Sylvie</h3>
-                                        <p className="text-primary font-medium">Artisane tricoteuse</p>
+                                    <div className="relative">
+                                        {/* Ligne de fil décorative */}
+                                        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-px h-6 bg-gradient-to-b from-primary/50 to-transparent animate-pulse" aria-hidden="true"></div>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-gradient-adaptive mb-3 animate-fade-in-up">Sylvie</h3>
                                     </div>
                                 </div>
-                                
-                                <div className="prose prose-lg max-w-none text-base-content/80">
-                                    <p className="mb-4">
-                                        Bonjour ! Je suis Sylvie, passionnée de tricot depuis plus de 20 ans. 
-                                        Ce qui a commencé comme un loisir s&apos;est transformé en une véritable vocation.
-                                    </p>
-                                    <p className="mb-4">
-                                        J&apos;ai appris les bases auprès de ma grand-mère, mais j&apos;ai su moderniser 
-                                        ces techniques ancestrales pour créer des pièces contemporaines qui 
-                                        allient tradition et modernité.
-                                    </p>
-                                    <p>
-                                        Chaque projet est unique et raconte une histoire. Mon objectif est de 
-                                        créer des pièces durables qui vous accompagneront au fil des saisons.
-                                    </p>
+                            
+                                {/* Contenu textuel avec mise en forme élégante */}
+                                <div className="space-y-8 mb-12">
+                                    <div className="relative">
+                                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-transparent rounded-full" aria-hidden="true"></div>
+                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                            Bonjour ! Je suis Sylvie, passionnée de tricot et de crochet depuis 55 ans. 
+                                            J&apos;ai commencé à tricoter pour mes poupées à l&apos;âge de 7 ans, ma mère m&apos;ayant 
+                                            transmis cet art merveilleux qui illumine chacune de mes journées.
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="relative">
+                                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full" aria-hidden="true"></div>
+                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                            Après des années consacrées à ma carrière professionnelle, c&apos;est depuis ma retraite 
+                                            en janvier 2022 que je me suis véritablement replongée dans cet univers. Ces 4 dernières 
+                                            années ont été une <strong className="text-primary">renaissance créative</strong>, où j&apos;ai pu allier les techniques ancestrales 
+                                            apprises de ma mère avec des créations contemporaines modernes.
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="relative">
+                                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-accent to-transparent rounded-full" aria-hidden="true"></div>
+                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                            Je crée des pièces durables et uniques par <strong className="text-secondary">pure passion</strong>. Chaque création 
+                                            est réalisée avec une attention particulière et tout l&apos;amour que je porte 
+                                            à cet art merveilleux qu&apos;est le tricot. Ces créations ne sont pas à vendre, 
+                                            elles sont le <em className="text-accent font-medium">reflet de ma passion personnelle</em>.
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div className="flex gap-2 mt-6">
-                                    <div className="badge badge-primary badge-outline">20+ ans d&apos;expérience</div>
-                                    <div className="badge badge-secondary badge-outline">Techniques traditionnelles</div>
-                                    <div className="badge badge-accent badge-outline">Créations modernes</div>
+                                {/* Badges stylés avec animations */}
+                                <div className="flex flex-wrap gap-4 justify-center">
+                                    <div className="group relative">
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300" aria-hidden="true"></div>
+                                        <div className="relative badge bg-gradient-to-r from-primary to-primary/80 text-primary-content border-0 badge-lg px-6 py-4 hover:scale-105 transition-transform duration-300">
+                                            <span className="font-bold">4 ans de retraite créative</span>
+                                        </div>
+                                    </div>
+                                    <div className="group relative">
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-secondary to-accent rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300" aria-hidden="true"></div>
+                                        <div className="relative badge bg-gradient-to-r from-secondary to-secondary/80 text-secondary-content border-0 badge-lg px-6 py-4 hover:scale-105 transition-transform duration-300">
+                                            <span className="font-bold">Créations passion</span>
+                                        </div>
+                                    </div>
+                                    <div className="group relative">
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300" aria-hidden="true"></div>
+                                        <div className="relative badge bg-gradient-to-r from-accent to-accent/80 text-accent-content border-0 badge-lg px-6 py-4 hover:scale-105 transition-transform duration-300">
+                                            <span className="font-bold">Fait avec amour</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Colonne droite - Compétences */}
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-base-content mb-6">Mes spécialités</h3>
-                        
-                        {skills.map((skill, index) => (
-                        <div key={index} className="space-y-2">
-                            <div className="flex justify-between items-center">
-                                <span className="text-base-content font-medium">{skill.name}</span>
-                                <span className="text-sm text-base-content/60">{skill.level}%</span>
-                            </div>
-                            <div className="w-full bg-base-300 rounded-full h-2.5">
-                                <div 
-                                    className={`bg-${skill.color} h-2.5 rounded-full transition-all duration-1000 ease-out`}
-                                    style={{ width: `${skill.level}%` }}
-                                ></div>
-                            </div>
-                        </div>
-                        ))}
-
-                        <div className="mt-8 p-6 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl border border-primary/20">
-                            <div className="flex items-center gap-3 mb-3">
-                                <span className="text-2xl">🏆</span>
-                                <h4 className="text-lg font-bold text-base-content">Reconnaissance</h4>
-                            </div>
-                            <p className="text-base-content/70">
-                                Mes créations ont été reconnues dans plusieurs expositions locales 
-                                et j&apos;ai eu l&apos;honneur de transmettre mon savoir-faire lors d&apos;ateliers 
-                                communautaires.
-                            </p>
                         </div>
                     </div>
                 </div>
 
-                {/* Valeurs */}
-                <div className="mb-16">
-                    <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-base-content">
-                        Mes valeurs
-                    </h3>
-                
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {values.map((value, index) => (
-                        <div 
-                            key={index} 
-                            className="card card-pastel shadow-pastel hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                        >
-                            <div className="card-body items-center text-center p-6">
-                            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                                {value.icon}
-                            </div>
-                            <h4 className="card-title text-lg text-base-content mb-2">
-                                {value.title}
-                            </h4>
-                            <p className="text-sm text-base-content/70 leading-relaxed">
-                                {value.description}
-                            </p>
-                            </div>
-                        </div>
-                        ))}
+                {/* Citation inspirante */}
+                <div className="text-center mt-16">
+                    <div className="max-w-2xl mx-auto">
+                        <blockquote className="text-xl md:text-2xl font-light italic text-adaptive mb-4">
+                            &ldquo;Chaque maille tissée avec passion devient un fil conducteur 
+                            vers le bonheur de celui qui la portera.&rdquo;
+                        </blockquote>
+                        <cite className="text-primary font-medium">- Sylvie</cite>
                     </div>
                 </div>
             </div>
