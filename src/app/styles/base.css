@@ -34,9 +34,51 @@
   --erc: 0 50% 25%;     /* Error content */
 }
 
+/* Thème pastel clair personnalisé pour DaisyUI */
+[data-theme="light-pastel"] {
+  --p: 326 60% 75%;     /* Rose pastel principal - contraste amélioré */
+  --pf: 326 65% 65%;    /* Rose pastel focus */
+  --pc: 326 25% 25%;    /* Contraste rose foncé */
+
+  --s: 190 55% 70%;     /* Bleu pastel secondaire - contraste amélioré */
+  --sf: 190 60% 60%;    /* Bleu pastel focus */
+  --sc: 190 30% 25%;    /* Contraste bleu foncé */
+
+  --a: 55 70% 75%;      /* Jaune pastel accent - contraste amélioré */
+  --af: 55 75% 65%;     /* Jaune pastel focus */
+  --ac: 55 35% 25%;     /* Contraste jaune foncé */
+
+  --n: 220 20% 30%;     /* Neutral foncé - meilleur contraste */
+  --nf: 220 25% 20%;    /* Neutral focus */
+  --nc: 220 15% 85%;    /* Neutral content */
+
+  /* Fonds pastels harmonieux au lieu du blanc */
+  --b1: 320 25% 96%;    /* Base 1 - fond rose très pâle */
+  --b2: 200 20% 94%;    /* Base 2 - fond bleu très pâle */
+  --b3: 50 15% 92%;     /* Base 3 - fond jaune très pâle */
+  --bc: 220 25% 25%;    /* Base content - texte plus foncé */
+
+  --in: 200 80% 75%;    /* Info pastel - contraste amélioré */
+  --inc: 200 60% 25%;   /* Info content */
+  --su: 120 50% 70%;    /* Success pastel - contraste amélioré */
+  --suc: 120 50% 25%;   /* Success content */
+  --wa: 45 85% 70%;     /* Warning pastel - contraste amélioré */
+  --wac: 45 70% 25%;    /* Warning content */
+  --er: 0 55% 75%;      /* Error pastel - contraste amélioré */
+  --erc: 0 60% 25%;     /* Error content */
+}
+
 /* Classes utilitaires personnalisées */
 .text-gradient-pastel {
     background: linear-gradient(135deg, #a8e6cf 0%, #ffd3a5 50%, #f8a5c2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.text-gradient-light {
+    background: linear-gradient(135deg, #86efac 0%, #fbbf24 50%, #f472b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

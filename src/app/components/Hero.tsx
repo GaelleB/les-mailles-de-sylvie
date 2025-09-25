@@ -13,9 +13,14 @@ const HeroRefined = () => {
     };
 
     return (
-        <section id="accueil" className="hero min-h-screen relative overflow-hidden bg-slate-800" ref={heroRef}>
+        <section 
+            id="accueil" 
+            className="hero min-h-screen relative overflow-hidden bg-slate-800" 
+            ref={heroRef}
+            aria-label="Section d'accueil - Les Mailles de Sylvie"
+        >
             {/* Éléments décoratifs flottants optimisés */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
                 <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float blur-sm"></div>
                 <div className="absolute top-40 right-20 w-16 h-16 bg-secondary/10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
                 <div className="absolute bottom-40 left-20 w-24 h-24 bg-accent/10 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
@@ -27,7 +32,7 @@ const HeroRefined = () => {
                 {/* Badge d'introduction raffiné */}
                 <div className="mb-8">
                     <div className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800/40 backdrop-blur-sm rounded-full border border-sky-300/30 shadow-lg">
-                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse" aria-hidden="true"></span>
                         <span className="text-sm font-medium text-slate-200">Artisane tricoteuse passionnée</span>
                     </div>
                 </div>
@@ -69,28 +74,30 @@ const HeroRefined = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                     <button 
                         onClick={() => scrollToSection('creations')}
-                        className="btn btn-primary btn-lg px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 group border-0"
+                        className="btn btn-primary btn-lg px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 group border-0 focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-800"
                         style={{
                             background: 'linear-gradient(135deg, #dda0dd, #87ceeb)',
                             color: 'white'
                         }}
+                        aria-label="Découvrir les créations tricot de Sylvie"
                         >
                         <span>Découvrir mes créations</span>
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </button>
                     
                     <button 
                         onClick={() => scrollToSection('a-propos')}
-                        className="btn btn-outline btn-lg px-8 py-4 border-2 border-sky-300/50 text-slate-300 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300"
+                        className="btn btn-outline btn-lg px-8 py-4 border-2 border-sky-300/50 text-slate-300 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-800"
+                        aria-label="En savoir plus sur Sylvie et son parcours"
                         >
                         En savoir plus
                     </button>
                 </div>
 
                 {/* Indicateur de scroll stylisé */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60">
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60" aria-hidden="true">
                     <div className="flex flex-col items-center gap-2 animate-bounce">
                         <span className="text-xs text-slate-400 font-medium tracking-wide">DÉFILER</span>
                         <div className="w-6 h-10 border-2 border-slate-400/50 rounded-full flex justify-center">
@@ -102,7 +109,7 @@ const HeroRefined = () => {
             </div>
 
             {/* Motif décoratif subtil */}
-            <div className="absolute inset-0 opacity-3">
+            <div className="absolute inset-0 opacity-3" aria-hidden="true">
                 <div className="absolute inset-0" style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f8a5c2' fill-opacity='0.05'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
                 }}

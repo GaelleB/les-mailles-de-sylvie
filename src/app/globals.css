@@ -3,6 +3,7 @@
 @import "./styles/components.css";
 @import "./styles/animations.css";
 @import "./styles/loader.css";
+@import "./styles/accessibility.css";
 
 /* Thème sombre pastel personnalisé pour DaisyUI */
 [data-theme="dark-pastel"] {

@@ -8,9 +8,14 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
     if (!isLoading) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100">
+        <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100"
+            role="status" 
+            aria-live="polite"
+            aria-label="Chargement du site Les Mailles de Sylvie en cours"
+        >
             {/* Fond avec motifs subtils */}
-            <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0 opacity-30" aria-hidden="true">
                 <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-rose-200/20 to-pink-300/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-purple-200/20 to-indigo-300/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
             </div>
@@ -29,7 +34,7 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
                 </div>
 
                 {/* Animation créative de pelote qui se transforme */}
-                <div className="relative w-72 h-48 mx-auto mb-12">
+                <div className="relative w-72 h-48 mx-auto mb-12" aria-hidden="true">
                     {/* Pelote principale avec transformation morphique */}
                     <div className="yarn-ball-morph absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="w-36 h-36 relative">
@@ -58,7 +63,14 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
                     </div>
 
                     {/* Fils qui se déroulent avec physique réaliste */}
-                    <svg width="288" height="192" className="absolute inset-0 overflow-visible">
+                    <svg 
+                        width="288" 
+                        height="192" 
+                        className="absolute inset-0 overflow-visible"
+                        aria-hidden="true"
+                        role="img"
+                        aria-label="Animation décorative de fils de laine qui se déroulent"
+                    >
                         <defs>
                         <linearGradient id="yarnGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#ec4899" />
@@ -132,7 +144,7 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
                     <div className="text-2xl text-gray-700 font-light mb-4 message-slide">
                         <span className="text-gradient">Création</span> en cours
                     </div>
-                    <div className="progress-container mb-6">
+                    <div className="progress-container mb-6" role="progressbar" aria-label="Progression du chargement">
                         <div className="progress-bar">
                             <div className="progress-fill"></div>
                         </div>
@@ -140,6 +152,10 @@ const YarnLoader = ({ isLoading }: YarnLoaderProps) => {
                     <p className="text-lg text-gray-500 italic opacity-fade">
                         Tissage artisanal de vos rêves...
                     </p>
+                    {/* Texte caché pour lecteurs d'écran */}
+                    <div className="sr-only">
+                        Veuillez patienter pendant que nous préparons l'univers des créations tricot de Sylvie
+                    </div>
                 </div>
             </div>
         </div>

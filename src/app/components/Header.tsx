@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,37 +24,53 @@ const Header = () => {
 
     return (
         <header 
-        className={`navbar fixed top-0 z-50 transition-all duration-300 ${
-            isScrolled 
-            ? 'bg-slate-800/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
-        }`}
+            id="navigation"
+            role="banner"
+            className={`navbar fixed top-0 z-50 transition-all duration-300 ${
+                isScrolled 
+                ? 'bg-slate-800/95 backdrop-blur-md shadow-lg' 
+                : 'bg-transparent'
+            }`}
+            aria-label="Navigation principale du site"
         >
         <div className="navbar-start">
             <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div 
+                tabIndex={0} 
+                role="button" 
+                className="btn btn-ghost lg:hidden focus:ring-2 focus:ring-sky-300"
+                aria-label="Ouvrir le menu de navigation"
+                aria-expanded="false"
+                aria-haspopup="true"
+            >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800/95 backdrop-blur-md rounded-box w-52">
-                <li><button onClick={() => scrollToSection('accueil')} className="text-base-content hover:text-primary">Accueil</button></li>
-                <li><button onClick={() => scrollToSection('a-propos')} className="text-base-content hover:text-primary">À propos</button></li>
-                <li><button onClick={() => scrollToSection('creations')} className="text-base-content hover:text-primary">Créations</button></li>
-                <li><button onClick={() => scrollToSection('galerie')} className="text-base-content hover:text-primary">Galerie</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="text-base-content hover:text-primary">Contact</button></li>
+            <ul 
+                tabIndex={0} 
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800/95 backdrop-blur-md rounded-box w-52"
+                role="menu"
+                aria-label="Menu de navigation mobile"
+            >
+                <li role="none"><button onClick={() => scrollToSection('accueil')} className="text-base-content hover:text-primary focus:ring-2 focus:ring-sky-300" role="menuitem" aria-label="Aller à l'accueil">Accueil</button></li>
+                <li role="none"><button onClick={() => scrollToSection('a-propos')} className="text-base-content hover:text-primary focus:ring-2 focus:ring-sky-300" role="menuitem" aria-label="Aller à la section à propos">À propos</button></li>
+                <li role="none"><button onClick={() => scrollToSection('creations')} className="text-base-content hover:text-primary focus:ring-2 focus:ring-sky-300" role="menuitem" aria-label="Aller aux créations">Créations</button></li>
+                <li role="none"><button onClick={() => scrollToSection('galerie')} className="text-base-content hover:text-primary focus:ring-2 focus:ring-sky-300" role="menuitem" aria-label="Aller à la galerie">Galerie</button></li>
+                <li role="none"><button onClick={() => scrollToSection('contact')} className="text-base-content hover:text-primary focus:ring-2 focus:ring-sky-300" role="menuitem" aria-label="Aller au contact">Contact</button></li>
             </ul>
             </div>
             <button 
-            onClick={() => scrollToSection('accueil')}
-            className="btn btn-ghost text-xl font-bold text-gradient-dark"
+                onClick={() => scrollToSection('accueil')}
+                className="btn btn-ghost text-xl font-bold text-gradient-dark focus:ring-2 focus:ring-sky-300"
+                aria-label="Les Mailles de Sylvie - Retour à l'accueil"
             >
-            Les Mailles de Sylvie
+                Les Mailles de Sylvie
             </button>
         </div>
         
-        <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-base">
+        <nav className="navbar-center hidden lg:flex" role="navigation" aria-label="Navigation principale">
+            <ul className="menu menu-horizontal px-1 text-base" role="menubar">
             <li>
                 <button 
                 onClick={() => scrollToSection('accueil')} 
@@ -98,6 +115,7 @@ const Header = () => {
         </div>
         
         <div className="navbar-end">
+            <ThemeToggle />
             <div className="tooltip tooltip-bottom" data-tip="Suivez mes créations">
             <button className="btn btn-ghost btn-circle hover:btn-primary group transition-all duration-300">
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">

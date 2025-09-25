@@ -2,6 +2,7 @@
 
 import { useLoading } from './hooks/useLoading';
 import YarnLoader from './components/YarnLoader';
+import SkipLinks from './components/SkipLinks';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -14,13 +15,16 @@ export default function Home() {
 
   return (
     <>
+      {/* Liens d'accès rapide pour navigation clavier */}
+      <SkipLinks />
+      
       {/* Loader - s'affiche pendant 3 secondes */}
       <YarnLoader isLoading={isLoading} />
       
       {/* Site principal - apparaît après le loader */}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Header />
-        <main>
+        <main id="main-content" role="main" aria-label="Contenu principal du site Les Mailles de Sylvie">
           <Hero />
           <About />
           <Creations />
