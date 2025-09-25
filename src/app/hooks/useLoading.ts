@@ -6,10 +6,10 @@ export const useLoading = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Le loader dure 5 secondes puis disparaît
+        // Le loader dure 3 secondes puis disparaît (optimisé pour mobile)
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 5000
+        }, 3000
     );
 
         return () => clearTimeout(timer);

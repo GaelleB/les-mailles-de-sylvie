@@ -1,0 +1,147 @@
+/* ===== COMPOSANTS UI ===== */
+
+/* Amélioration de la navigation pour plus de contraste */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(248, 165, 194, 0.1);
+}
+
+/* Hero stats - Mobile First */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 320px;
+}
+
+@media (min-width: 768px) {
+    .hero-stats {
+        gap: 2rem;
+        margin: 3rem auto;
+        max-width: 400px;
+    }
+}
+
+.hero-stat {
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+    .hero-stat {
+        padding: 1rem;
+    }
+}
+
+/* Cards de valeurs avec meilleur contraste - Mobile First */
+.value-card {
+    background: rgba(45, 55, 70, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .value-card {
+        padding: 2rem;
+    }
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    background: rgba(45, 55, 70, 1);
+    border-color: rgba(248, 165, 194, 0.3);
+}
+
+/* Amélioration des icônes des valeurs */
+.value-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+@media (min-width: 768px) {
+    .value-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Section À propos avec meilleur contraste */
+.about-section {
+    background: linear-gradient(135deg, 
+        rgba(45, 55, 70, 0.95) 0%, 
+        rgba(35, 45, 60, 0.98) 100%);
+    color: white;
+}
+
+/* Profile card améliorée */
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        padding: 2rem;
+    }
+}
+
+/* Badges avec plus de style */
+.badge-custom {
+    background: rgba(248, 165, 194, 0.2);
+    color: #f8a5c2;
+    border: 1px solid rgba(248, 165, 194, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Barres de progression plus stylées */
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 6px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .skill-bar {
+        height: 8px;
+    }
+}
+
+.skill-progress {
+    background: linear-gradient(90deg, #f8a5c2, #a8e6cf);
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: width 1.5s ease-out;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}

@@ -1,0 +1,118 @@
+/* ===== ANIMATIONS OPTIMISÉES MOBILE ===== */
+
+/* Respecter les préférences d'animation utilisateur */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Animation d'entrée pour les éléments */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation pour les cards */
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+.value-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Logo avec effet de machine à écrire - Optimisé mobile */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #ec4899;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 2s steps(11, end), blink-caret 1s step-end infinite;
+}
+
+@media (min-width: 768px) {
+    .typewriter {
+        border-right-width: 3px;
+    }
+}
+
+.subtitle-appear {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2.5s forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ec4899; }
+}
+
+/* Messages et textes */
+.message-slide {
+    animation: slideInUp 1s ease-out 3s both;
+}
+
+.progress-container {
+    animation: slideInUp 1s ease-out 3.5s both;
+}
+
+.opacity-fade {
+    animation: fadeInUp 1s ease-out 4s both;
+}
+
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 180px;
+    height: 3px;
+    background: rgba(236, 72, 153, 0.2);
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .progress-bar {
+        width: 200px;
+        height: 4px;
+    }
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ec4899, #f472b6, #a855f7);
+    border-radius: 2px;
+    animation: progressFill 3s ease-in-out infinite;
+}
+
+@keyframes progressFill {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #ec4899, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
