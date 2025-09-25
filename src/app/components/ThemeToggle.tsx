@@ -12,7 +12,21 @@ const ThemeToggle = () => {
         
         const initialTheme = savedTheme || (prefersDark ? 'dark-pastel' : 'light-pastel');
         setTheme(initialTheme);
+        
+        // Appliquer le thème
         document.documentElement.setAttribute('data-theme', initialTheme);
+        
+        // Mettre à jour les classes body selon le thème initial
+        const body = document.body;
+        if (initialTheme === 'light-pastel') {
+            body.className = body.className
+                .replace('bg-slate-800', 'bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50')
+                .replace('text-slate-100', 'text-slate-800');
+        } else {
+            body.className = body.className
+                .replace('bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50', 'bg-slate-800')
+                .replace('text-slate-800', 'text-slate-100');
+        }
     }, []);
 
     const toggleTheme = () => {
@@ -21,13 +35,14 @@ const ThemeToggle = () => {
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         
-        // Également mettre à jour la classe body pour le fond
+        // Mettre à jour les classes body selon le thème
+        const body = document.body;
         if (newTheme === 'light-pastel') {
-            document.body.className = document.body.className
+            body.className = body.className
                 .replace('bg-slate-800', 'bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50')
                 .replace('text-slate-100', 'text-slate-800');
         } else {
-            document.body.className = document.body.className
+            body.className = body.className
                 .replace('bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50', 'bg-slate-800')
                 .replace('text-slate-800', 'text-slate-100');
         }

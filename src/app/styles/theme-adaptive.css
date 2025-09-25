@@ -1,0 +1,102 @@
+/* ===== STYLES ADAPTATIFS AUX THÈMES ===== */
+
+/* Badge adaptatif selon le thème */
+.badge-adaptive {
+    background: rgba(var(--b2), 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--bc), 0.2);
+    color: var(--bc);
+}
+
+/* Texte adaptatif pour les descriptions */
+.text-adaptive {
+    color: rgba(var(--bc), 0.8);
+}
+
+.text-adaptive-light {
+    color: rgba(var(--bc), 0.6);
+}
+
+/* Gradient de texte adaptatif */
+[data-theme="dark-pastel"] .text-gradient-adaptive {
+    background: linear-gradient(135deg, #87ceeb 0%, #f0e68c 50%, #dda0dd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+[data-theme="light-pastel"] .text-gradient-adaptive {
+    background: linear-gradient(135deg, #86efac 0%, #fbbf24 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Boutons adaptatifs */
+.btn-adaptive-focus {
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark-pastel"] .btn-adaptive-focus:focus {
+    box-shadow: 0 0 0 2px #1e293b, 0 0 0 4px #87ceeb;
+}
+
+[data-theme="light-pastel"] .btn-adaptive-focus:focus {
+    box-shadow: 0 0 0 2px #fdf2f8, 0 0 0 4px #f472b6;
+}
+
+/* Indicateur de scroll adaptatif */
+.scroll-indicator-adaptive {
+    border-color: rgba(var(--bc), 0.3);
+}
+
+.scroll-indicator-adaptive .scroll-dot {
+    background-color: rgba(var(--bc), 0.4);
+}
+
+.scroll-indicator-adaptive .scroll-text {
+    color: rgba(var(--bc), 0.5);
+}
+
+/* Navbar adaptative */
+[data-theme="dark-pastel"] .navbar-scrolled-adaptive {
+    background: rgba(30, 41, 59, 0.95);
+    border-bottom-color: rgba(135, 206, 235, 0.2);
+}
+
+[data-theme="light-pastel"] .navbar-scrolled-adaptive {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(244, 114, 182, 0.2);
+}
+
+/* Menu mobile adaptatif */
+[data-theme="dark-pastel"] .menu-mobile-adaptive {
+    background: rgba(30, 41, 59, 0.95);
+}
+
+[data-theme="light-pastel"] .menu-mobile-adaptive {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Statistiques Hero adaptatives */
+.hero-stat-adaptive {
+    background: rgba(var(--b2), 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--bc), 0.1);
+    color: var(--bc);
+}
+
+/* Élément flottant adaptatif */
+.floating-element {
+    background: rgba(var(--p), 0.1);
+}
+
+.floating-element-secondary {
+    background: rgba(var(--s), 0.1);
+}
+
+.floating-element-accent {
+    background: rgba(var(--a), 0.1);
+}

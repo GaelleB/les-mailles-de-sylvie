@@ -15,7 +15,7 @@ const HeroRefined = () => {
     return (
         <section 
             id="accueil" 
-            className="hero min-h-screen relative overflow-hidden bg-slate-800" 
+            className="hero min-h-screen relative overflow-hidden bg-base-100" 
             ref={heroRef}
             aria-label="Section d'accueil - Les Mailles de Sylvie"
         >
@@ -31,23 +31,23 @@ const HeroRefined = () => {
                 <div className="max-w-4xl fade-in-up">
                 {/* Badge d'introduction raffiné */}
                 <div className="mb-8">
-                    <div className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800/40 backdrop-blur-sm rounded-full border border-sky-300/30 shadow-lg">
+                    <div className="inline-flex items-center gap-2 px-6 py-3 badge-adaptive rounded-full shadow-lg">
                         <span className="w-2 h-2 bg-primary rounded-full animate-pulse" aria-hidden="true"></span>
-                        <span className="text-sm font-medium text-slate-200">Artisane tricoteuse passionnée</span>
+                        <span className="text-sm font-medium">Artisane tricoteuse passionnée</span>
                     </div>
                 </div>
 
                 {/* Titre principal avec gradient optimisé */}
                 <div className="mb-8">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                    <span className="block text-gradient-dark mb-2">Les Mailles</span>
-                    <span className="block text-slate-300 text-4xl md:text-5xl lg:text-6xl">de Sylvie</span>
+                    <span className="block text-gradient-adaptive mb-2">Les Mailles</span>
+                    <span className="block text-adaptive text-4xl md:text-5xl lg:text-6xl">de Sylvie</span>
                     </h1>
                 </div>
 
                 {/* Sous-titre avec meilleur espacement */}
                 <div className="mb-12">
-                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-adaptive max-w-2xl mx-auto leading-relaxed">
                         Découvrez un univers chaleureux où chaque fil raconte une histoire. 
                     <br className="hidden md:block" />
                         Créations artisanales uniques, tricotées avec amour et savoir-faire.

@@ -28,7 +28,7 @@ const Header = () => {
             role="banner"
             className={`navbar fixed top-0 z-50 transition-all duration-300 ${
                 isScrolled 
-                ? 'bg-slate-800/95 backdrop-blur-md shadow-lg' 
+                ? 'navbar-scrolled-adaptive backdrop-blur-md shadow-lg' 
                 : 'bg-transparent'
             }`}
             aria-label="Navigation principale du site"
@@ -49,7 +49,7 @@ const Header = () => {
             </div>
             <ul 
                 tabIndex={0} 
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800/95 backdrop-blur-md rounded-box w-52"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg menu-mobile-adaptive backdrop-blur-md rounded-box w-52"
                 role="menu"
                 aria-label="Menu de navigation mobile"
             >
