@@ -14,21 +14,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Les Mailles de Sylvie - Créations Tricot Artisanales Made in France",
-  description: "✨ Découvrez l'univers chaleureux de Sylvie : pulls tricotés main, couvertures douillettes, écharpes uniques. 20 ans d'expérience, créations sur-mesure, livraison France. Artisanat français authentique.",
+  title: {
+    default: "Les Mailles de Sylvie - Créations Tricot Artisanales Made in France",
+    template: "%s | Les Mailles de Sylvie"
+  },
+  description: "✨ Portfolio tricot de Sylvie : 55 ans de passion pour créer pulls, écharpes et couvertures uniques. Découvrez un savoir-faire artisanal français authentique transmis de mère en fille.",
   keywords: [
     "tricot artisanal",
-    "pulls faits main", 
+    "portfolio tricot", 
+    "pulls faits main",
     "écharpes tricot",
     "couvertures laine",
-    "créations sur mesure",
     "artisan tricoteur France",
     "Sylvie tricoteuse",
     "laine naturelle",
     "tricot traditionnel",
-    "cadeau fait main",
-    "mode éthique",
-    "savoir-faire français"
+    "savoir-faire français",
+    "passion tricot",
+    "créations uniques",
+    "art textile",
+    "heritage artisanal"
   ].join(", "),
   authors: [{ name: "Sylvie - Les Mailles de Sylvie" }],
   creator: "Sylvie",
@@ -42,27 +47,32 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    apple: '/apple-touch-icon.svg',
+    icon: '/favicon.ico',
+  },
   openGraph: {
-    title: "Les Mailles de Sylvie - Tricot Artisanal Authentique",
-    description: "Créations tricot uniques faites main avec 20 ans d'expérience. Pulls, écharpes, couvertures sur-mesure. Artisanat français authentique.",
+    title: "Les Mailles de Sylvie - Portfolio Tricot Artisanal",
+    description: "✨ Portfolio tricot de Sylvie : 55 ans de passion pour créer des pièces uniques. Découvrez un savoir-faire artisanal français transmis de mère en fille.",
     url: 'https://les-mailles-de-sylvie.vercel.app',
     siteName: 'Les Mailles de Sylvie',
     locale: 'fr_FR',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Les Mailles de Sylvie - Créations tricot artisanales',
+        url: '/apple-touch-icon.svg',
+        width: 180,
+        height: 180,
+        alt: 'Les Mailles de Sylvie - Portfolio tricot artisanal avec pelote de laine et aiguilles',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Les Mailles de Sylvie - Tricot Artisanal',
-    description: 'Créations tricot uniques faites main avec passion',
-    images: ['/og-image.jpg'],
+    title: 'Les Mailles de Sylvie - Portfolio Tricot',
+    description: '✨ 55 ans de passion tricot : découvrez des créations uniques faites main avec amour et savoir-faire artisanal français',
+    images: ['/apple-touch-icon.svg'],
+    creator: '@LesMaillesDeSylvie',
   },
   robots: {
     index: true,

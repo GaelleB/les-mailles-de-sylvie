@@ -7,17 +7,17 @@ const StructuredData = () => {
         "@id": "https://les-mailles-de-sylvie.vercel.app/#business",
         "name": "Les Mailles de Sylvie",
         "alternateName": "Mailles de Sylvie",
-        "description": "Créations tricot artisanales faites main avec passion. Pulls, écharpes, couvertures sur-mesure par une artisane expérimentée.",
+        "description": "Portfolio tricot artisanal de Sylvie : 55 ans de passion pour créer des pièces uniques. Découvrez un savoir-faire français authentique transmis de mère en fille.",
         "url": "https://les-mailles-de-sylvie.vercel.app",
-        "image": "https://les-mailles-de-sylvie.vercel.app/og-image.jpg",
-        "logo": "https://les-mailles-de-sylvie.vercel.app/logo.png",
+        "image": "https://les-mailles-de-sylvie.vercel.app/apple-touch-icon.svg",
+        "logo": "https://les-mailles-de-sylvie.vercel.app/apple-touch-icon.svg",
         "founder": {
             "@type": "Person",
             "name": "Sylvie",
             "jobTitle": "Artisane tricoteuse",
             "knowsAbout": ["Tricot", "Artisanat", "Créations textiles", "Laine naturelle"]
         },
-        "foundingDate": "2004",
+        "foundingDate": "1969",
         "areaServed": {
             "@type": "Country",
             "name": "France"
@@ -89,12 +89,9 @@ const StructuredData = () => {
         "@id": "https://les-mailles-de-sylvie.vercel.app/#sylvie",
         "name": "Sylvie",
         "jobTitle": "Artisane tricoteuse",
-        "description": "Artisane passionnée avec 20 ans d'expérience dans le tricot artisanal",
+        "description": "Artisane passionnée avec 55 ans d'expérience dans le tricot artisanal français, transmettant un savoir-faire familial authentique",
         "url": "https://les-mailles-de-sylvie.vercel.app",
-        "image": "https://les-mailles-de-sylvie.vercel.app/sylvie-portrait.jpg",
-        "sameAs": [
-            "https://www.instagram.com/les.mailles.de.sylvie"
-        ],
+        "image": "https://les-mailles-de-sylvie.vercel.app/apple-touch-icon.svg",
         "knowsAbout": [
             "Tricot artisanal",
             "Artisanat textile",
