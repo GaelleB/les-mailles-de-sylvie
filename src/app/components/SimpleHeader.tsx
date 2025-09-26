@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 const SimpleHeader = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -109,8 +108,8 @@ const SimpleHeader = () => {
                 </div>
             </nav>
 
-            {/* Theme toggle */}
-            <ThemeToggle />
+            {/* Right section - empty for now */}
+            <div></div>
 
             {/* Mobile menu */}
             {showMenu && (

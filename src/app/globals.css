@@ -4,21 +4,20 @@
 @import "./styles/animations.css";
 @import "./styles/loader.css";
 @import "./styles/accessibility.css";
-@import "./styles/theme-adaptive.css";
 
 /* Thème sombre pastel personnalisé pour DaisyUI */
 [data-theme="dark-pastel"] {
-  --p: 326 60% 70%;     /* Rose pastel principal */
-  --pf: 326 65% 75%;    /* Rose pastel focus */
-  --pc: 330 20% 85%;    /* Contraste rose (clair pour fond sombre) */
+  --p: 326 65% 80%;     /* Rose pastel principal - plus clair pour meilleur contraste */
+  --pf: 326 70% 85%;    /* Rose pastel focus */
+  --pc: 330 20% 90%;    /* Contraste rose (très clair pour fond sombre) */
 
-  --s: 190 55% 75%;     /* Bleu pastel secondaire */
-  --sf: 190 60% 80%;    /* Bleu pastel focus */
-  --sc: 195 20% 85%;    /* Contraste bleu (clair pour fond sombre) */
+  --s: 190 60% 80%;     /* Bleu pastel secondaire - plus clair pour meilleur contraste */
+  --sf: 190 65% 85%;    /* Bleu pastel focus */
+  --sc: 195 20% 90%;    /* Contraste bleu (très clair pour fond sombre) */
 
-  --a: 55 70% 75%;      /* Jaune pastel accent */
-  --af: 55 75% 80%;     /* Jaune pastel focus */
-  --ac: 60 20% 85%;     /* Contraste jaune (clair pour fond sombre) */
+  --a: 55 75% 80%;      /* Jaune pastel accent - plus clair pour meilleur contraste */
+  --af: 55 80% 85%;     /* Jaune pastel focus */
+  --ac: 60 20% 90%;     /* Contraste jaune (très clair pour fond sombre) */
 
   --n: 220 20% 25%;     /* Neutral foncé */
   --nf: 220 25% 15%;    /* Neutral focus */

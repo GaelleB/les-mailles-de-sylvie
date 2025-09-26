@@ -24,20 +24,20 @@ const HeroRefined = () => {
                     {/* Titre principal simplifié */}
                     <div className="mb-16 fade-in-up">
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                            <span className="block text-gradient-adaptive mb-8">Les Mailles de Sylvie</span>
+                            <span className="block text-gradient-dark mb-8">Les Mailles de Sylvie</span>
                         </h1>
                     </div>
 
                     {/* Message personnel et chaleureux */}
                     <div className="mb-8 md:mb-16 fade-in-up" style={{animationDelay: '0.3s'}}>
-                        <p className="text-lg md:text-xl lg:text-2xl text-adaptive max-w-3xl mx-auto leading-relaxed mb-8 md:mb-12 px-4">
+                        <p className="text-lg md:text-xl lg:text-2xl text-slate-100 max-w-3xl mx-auto leading-relaxed mb-8 md:mb-12 px-4">
                             Bienvenue dans mon univers de tricot ! 
                             <br />
                             <span className="text-primary font-medium">55 ans de passion</span> pour créer des pièces uniques 
                             <br className="hidden md:block" />
                             avec <span className="text-accent font-medium">amour</span> et <span className="text-secondary font-medium">savoir-faire</span>.
                         </p>
-                        <p className="text-base md:text-lg text-adaptive/80 italic px-4">
+                        <p className="text-base md:text-lg text-slate-200 italic px-4">
                             Mes créations ne sont pas à vendre, elles sont le reflet de ma passion personnelle.
                         </p>
                     </div>
@@ -61,7 +61,7 @@ const HeroRefined = () => {
                         
                         <button 
                             onClick={() => scrollToSection('galerie')}
-                            className="btn btn-outline btn-md md:btn-lg px-6 md:px-10 py-3 md:py-4 border-2 border-primary/50 text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-full w-full sm:w-auto max-w-xs"
+                            className="btn btn-outline btn-md md:btn-lg px-6 md:px-10 py-3 md:py-4 border-2 border-slate-100 text-slate-100 hover:bg-slate-100 hover:text-slate-800 transition-all duration-300 rounded-full w-full sm:w-auto max-w-xs shadow-lg"
                             aria-label="Voir la galerie de créations"
                         >
                             <span className="text-sm md:text-base">Voir mes créations</span>
@@ -71,7 +71,7 @@ const HeroRefined = () => {
                     {/* Indicateur de scroll stylisé */}
                     <div className="absolute -bottom-42 md:-bottom-26 left-1/2 transform -translate-x-1/2 opacity-60 fade-in-up" style={{animationDelay: '1s'}} aria-hidden="true">
                         <div className="flex flex-col items-center gap-3 animate-bounce-subtle">
-                            <span className="text-xs text-slate-300 font-medium tracking-wide">DÉCOUVRIR</span>
+                            <span className="text-xs text-slate-100 font-medium tracking-wide">DÉCOUVRIR</span>
                             <div className="w-6 h-10 border-2 border-slate-300/50 rounded-full flex justify-center">
                                 <div className="w-1 h-3 bg-slate-300/60 rounded-full mt-2 animate-pulse"></div>
                             </div>

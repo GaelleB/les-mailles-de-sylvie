@@ -28,7 +28,7 @@ const About = () => {
                                         </div>
                                     </div>
                                     <div className="relative">
-                                        <h3 className="text-4xl md:text-5xl font-bold text-gradient-adaptive mb-3">Sylvie</h3>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-gradient-dark mb-3">Sylvie</h3>
                                     </div>
                                 </div>
                             
@@ -36,7 +36,7 @@ const About = () => {
                                 <div className="space-y-8 mb-12">
                                     <div className="relative fade-in-up" style={{animationDelay: '0.6s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-transparent rounded-full" aria-hidden="true"></div>
-                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                        <p className="text-lg md:text-xl leading-relaxed text-slate-100 pl-6">
                                             Bonjour ! Je suis Sylvie, passionnée de tricot et de crochet depuis 55 ans. 
                                             J&apos;ai commencé à tricoter pour mes poupées à l&apos;âge de 7 ans, ma mère m&apos;ayant 
                                             transmis cet art merveilleux qui illumine chacune de mes journées.
@@ -45,7 +45,7 @@ const About = () => {
                                     
                                     <div className="relative fade-in-up" style={{animationDelay: '0.9s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full" aria-hidden="true"></div>
-                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                        <p className="text-lg md:text-xl leading-relaxed text-slate-100 pl-6">
                                             Après des années consacrées à ma carrière professionnelle, c&apos;est depuis ma retraite 
                                             en janvier 2022 que je me suis véritablement replongée dans cet univers. Ces 4 dernières 
                                             années ont été une <strong className="text-primary">renaissance créative</strong>, où j&apos;ai pu allier les techniques ancestrales 
@@ -55,7 +55,7 @@ const About = () => {
                                     
                                     <div className="relative fade-in-up" style={{animationDelay: '1.2s'}}>
                                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-accent to-transparent rounded-full" aria-hidden="true"></div>
-                                        <p className="text-lg md:text-xl leading-relaxed text-adaptive pl-6">
+                                        <p className="text-lg md:text-xl leading-relaxed text-slate-100 pl-6">
                                             Je crée des pièces durables et uniques par <strong className="text-secondary">pure passion</strong>. Chaque création 
                                             est réalisée avec une attention particulière et tout l&apos;amour que je porte 
                                             à cet art merveilleux qu&apos;est le tricot. Ces créations ne sont pas à vendre, 
@@ -93,7 +93,7 @@ const About = () => {
                 {/* Citation inspirante */}
                 <div className="text-center mt-16">
                     <div className="max-w-2xl mx-auto">
-                        <blockquote className="text-xl md:text-2xl font-light italic text-adaptive mb-4">
+                        <blockquote className="text-xl md:text-2xl font-light italic text-slate-100 mb-4">
                             &ldquo;Chaque maille tissée avec passion devient un fil conducteur 
                             vers le bonheur de celui qui la portera.&rdquo;
                         </blockquote>

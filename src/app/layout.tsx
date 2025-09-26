@@ -91,7 +91,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-800 min-h-screen text-slate-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-slate-800 text-slate-100`}
       >
         {children}
       </body>
