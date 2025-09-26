@@ -3,7 +3,7 @@
 import { useLoading } from './hooks/useLoading';
 import YarnLoader from './components/YarnLoader';
 import SkipLinks from './components/SkipLinks';
-import Header from './components/Header';
+import SimpleHeader from './components/SimpleHeader';
 import Hero from './components/Hero';
 import About from './components/About';
 import Creations from './components/Creations';
@@ -23,7 +23,7 @@ export default function Home() {
       
       {/* Site principal - apparaît après le loader */}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <Header />
+        <SimpleHeader />
         <main id="main-content" role="main" aria-label="Contenu principal du site Les Mailles de Sylvie">
           <Hero />
           <About />
